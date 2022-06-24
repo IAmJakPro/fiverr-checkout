@@ -1,0 +1,1705 @@
+<html>
+
+<head>
+	<title> test </title>
+
+
+	<link rel="stylesheet" href="payment.css">
+	<link rel="stylesheet" href="amount.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<script>
+
+		$(document).ready(function () {
+			$("#paym_FL-BIT_17").click(function () {
+
+				if ($("#paym_FL-BIT_34").is(":visible")) {
+					$("#cardSpan").html("");
+					$("#paym_APP-CREDIT-CARD-METHOD_12").height(64);
+					$("#paym_APP-CREDIT-CARD-METHOD_12").attr('block-size', '64px');
+
+					$("#paym_FL-BIT_34").hide();
+					$("#creditRAdio").prop("checked", false);
+				}
+				else {
+					$("#cardSpan").html("You agree to authorize the use of your card for this deposit and future payments, and agree to be bound to the Terms & Conditions.");
+					$("#paym_APP-CREDIT-CARD-METHOD_12").height(284);
+					$("#paym_APP-CREDIT-CARD-METHOD_12").attr('block-size', '284px');
+
+					$("#paym_FL-BIT_34").show();
+
+					$("#creditRAdio").prop("checked", true);
+					$("#paypalRadio").prop("checked", false);
+				}
+			});
+
+			$("#paym_APP-GENERIC-METHOD_94").click(function () {
+
+				$("#cardSpan").html("You agree to authorize the use of your PayPal account for this deposit and future payments, and agree to be bound to the Terms & Conditions.<br/> PayPal does not support Prepaid and gift cards as a funding source.");
+
+				$("#paym_APP-CREDIT-CARD-METHOD_12").height(64);
+				$("#paym_APP-CREDIT-CARD-METHOD_12").attr('block-size', '64px');
+
+				$("#paym_FL-BIT_34").hide();
+				$("#paypalRadio").prop("checked", true);
+
+			});
+
+			$("#paym_APP-GENERIC-METHOD_120").click(function () {
+
+				$("#cardSpan").html("");
+				$("#skrillRadio").prop("checked", true);
+				$("#creditRAdio").prop("checked", false);
+				$("#paypalRadio").prop("checked", false);
+			});
+
+		}
+		);
+
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				/* Toggle between adding and removing the "active" class,
+				to highlight the button that controls the panel */
+				this.classList.toggle("active");
+
+				/* Toggle between hiding and showing the active panel */
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	</script>
+
+<div class="container">
+	<fl id="paym_FL-CARD_1">
+		<fl id="paym_FL-BIT_2">
+			<!---->
+
+			<fl id="paym_FL-BIT_3">
+				<fl id="paym_FL-BIT_4">
+					<fl id="paym_FL-HEADING_5">
+						<!---->
+
+						<h2 id="paym_H2_6">
+
+							Add new payment method
+							<!---->
+
+
+							<fl id="paym_FL-CARD-HEADER-TITLE_7">
+
+								<fl id="paym_FL-HEADING_8">
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</fl>
+							</fl>
+							<!---->
+
+							<!---->
+
+						</h2>
+						<!---->
+
+						<!---->
+
+						<!---->
+
+						<!---->
+
+						<!---->
+
+						<!---->
+
+						<!---->
+
+					</fl>
+					<!---->
+
+					<!---->
+
+				</fl>
+				<!---->
+
+			</fl>
+			<!---->
+
+			<fl id="paym_FL-BIT_10">
+				<app id="paym_APP-METHODS_11">
+					<app id="paym_APP-CREDIT-CARD-METHOD_12">
+						<app id="paym_APP-SOURCE-TEMPLATE_13">
+							<fl id="paym_FL-LIST-ITEM_14">
+								<fl id="paym_FL-BIT_15">
+									<!---->
+
+									<!---->
+
+
+									<!---->
+
+									<fl id="paym_FL-BIT_16" class="accordion">
+										<fl id="paym_FL-BIT_17" class="panel">
+											<input type="radio" id="creditRAdio" name="methods" />
+											<fl id="paym_FL-BIT_18">
+												<fl id="paym_FL-BIT_19">
+												</fl>
+												<fl id="paym_FL-RADIO_20">
+													<fl id="paym_FL-BIT_21">
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+													</fl>
+													<!---->
+
+												</fl>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+											<!---->
+
+											<!---->
+
+											<fl id="paym_FL-BIT_25">
+												<fl id="paym_FL-LIST-ITEM-HEADER_26">
+													<app id="paym_APP-SOURCE-TEMPLATE-HEADER_27">
+														
+														<app id="paym_APP-SOURCE-TEMPLATE-HEADER-TITLE_28">
+															<!-- <div id="paym_DIV_30"> -->
+																Debit or credit card
+
+																<!---->
+
+															<!-- </div> -->
+															<fl id="paym_FL-TEXT_29">
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+														</app>
+														<fl id="paym_FL-TEXT_31">
+															<div id="paym_DIV_32">
+																All major cards accepted
+																<!---->
+
+															</div>
+															<!---->
+
+															<!---->
+
+															<!---->
+
+															<!---->
+
+															<!---->
+
+															<!---->
+
+														</fl>
+													</app>
+												</fl>
+											</fl>
+											<!---->
+
+											<fl id="paym_FL-BIT_33">
+												<!---->
+
+												<!---->
+
+											</fl>
+										</fl>
+										<fl id="paym_FL-BIT_34">
+											<fl id="paym_FL-LIST-ITEM-BODY_35">
+												<app id="paym_APP-SOURCE-TEMPLATE-BODY_36">
+													<!---->
+
+
+													<form action="https://www.freelancer.com/deposit" method="post"
+														id="paym_FORM_40">
+														<input type="hidden" id="paym_INPUT_41" name="Bin" />
+														<input type="hidden" id="paym_INPUT_42" name="JWT" />
+													</form>
+
+													<fl id="paym_FL-GRID_44">
+														<fl id="paym_FL-COL_45">
+															<fl id="paym_FL-TEXT_46">
+																<div id="paym_DIV_47">
+																	Card number:
+																	<!---->
+
+																</div>
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+															<fl id="paym_FL-BIT_48">
+																<input id="field" required="" size="22" maxlength="22"
+																	autocomplete="cc-number"
+																	class="CreditCardMethodIframe">
+															</fl>
+															<!---->
+
+														</fl>
+														<fl id="paym_FL-COL_50">
+															<fl id="paym_FL-TEXT_51">
+																<div id="paym_DIV_52">
+																	Expiry date:
+																	<!---->
+
+																</div>
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+															<fl id="paym_FL-BIT_53">
+																<input id="field" required="" size="7" maxlength="7"
+																	placeholder="MM / YY" autocomplete="cc-exp"
+																	class="CreditCardMethodIframe">
+															</fl>
+															<!---->
+
+														</fl>
+														<fl id="paym_FL-COL_55">
+															<fl id="paym_FL-TEXT_56">
+																<div id="paym_DIV_57">
+																	Cardholder name:
+																	<!---->
+
+																</div>
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+															<fl id="paym_FL-BIT_58">
+																<input id="field" required="" maxlength="255"
+																	pattern="\S.*" autocomplete="cc-name"
+																	class="CreditCardMethodIframe">
+															</fl>
+															<!---->
+
+														</fl>
+														<fl id="paym_FL-COL_60">
+															<fl id="paym_FL-BIT_61">
+																<fl id="paym_FL-TEXT_62">
+																	<div id="paym_DIV_63">
+																		CVC/CVV:
+																		<!---->
+
+																	</div>
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																</fl>
+																<fl id="paym_FL-TOOLTIP_64">
+																	<fl id="paym_FL-BIT_65">
+																		<span id="paym_SPAN_66"></span>
+																		<fl id="paym_FL-BIT_67">
+																			<fl id="paym_FL-ICON_68">
+																				<div id="paym_DIV_69">
+																					<div id="paym_DIV_70">
+																						<svg id="paym_svg_71">
+																							<path id="paym_path_72">
+																							</path>
+																						</svg>
+																					</div>
+																				</div>
+																			</fl>
+																		</fl>
+																		<!---->
+																		<span id="paym_SPAN_73"></span>
+																		<!---->
+
+																	</fl>
+																</fl>
+															</fl>
+															<fl id="paym_FL-BIT_74">
+																<input id="field" required="" size="4" maxlength="4"
+																	pattern="[0-9]{3,4}" autocomplete="cc-csc"
+																	class="CreditCardMethodIframe">
+															</fl>
+															<!---->
+
+														</fl>
+														<!---->
+
+													</fl>
+													<!---->
+
+													<!---->
+
+													<app id="paym_APP-CREDIT-CARD-LOGOS_76">
+														<fl id="paym_FL-BIT_77">
+															<fl id="paym_FL-PICTURE_78">
+																<picture id="paym_PICTURE_79">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_80" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/cc/visa.svg"
+																		alt="visa logo" id="paym_IMG_81" />
+																</picture>
+																<!---->
+
+															</fl>
+															<!---->
+
+															<fl id="paym_FL-PICTURE_82">
+																<picture id="paym_PICTURE_83">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_84" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/cc/mastercard.svg"
+																		alt="master card logo" id="paym_IMG_85" />
+																</picture>
+																<!---->
+
+															</fl>
+															<!---->
+
+															<fl id="paym_FL-PICTURE_86">
+																<picture id="paym_PICTURE_87">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_88" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/cc/amex.svg"
+																		alt="amex logo" id="paym_IMG_89" />
+																</picture>
+																<!---->
+
+															</fl>
+															<!---->
+
+															<fl id="paym_FL-PICTURE_90">
+																<picture id="paym_PICTURE_91">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_92" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/cc/jcb.svg"
+																		alt="jcb logo" id="paym_IMG_93" />
+																</picture>
+																<!---->
+
+															</fl>
+															<!---->
+
+															<!---->
+
+														</fl>
+													</app>
+												</app>
+												<!---->
+
+											</fl>
+											<!---->
+
+										</fl>
+									</fl>
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</fl>
+							</fl>
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+						</app>
+					</app>
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<app id="paym_APP-GENERIC-METHOD_94">
+						<app id="paym_APP-SOURCE-TEMPLATE_95">
+							<fl id="paym_FL-LIST-ITEM_96">
+								<fl id="paym_FL-BIT_97">
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<fl id="paym_FL-BIT_98">
+										<fl id="paym_FL-BIT_99">
+											<input type="radio" id="paypalRadio" name="methods" />
+											<fl id="paym_FL-BIT_100">
+												<fl id="paym_FL-BIT_101">
+												</fl>
+												<fl id="paym_FL-RADIO_102">
+													<fl id="paym_FL-BIT_103">
+														<!--	<input type="radio" id="paym_INPUT_104" />
+													<label for="mpaqawixksigvdn--paypal_reference" id="paym_LABEL_105">
+														<span id="paym_SPAN_106"></span>
+													</label>
+													-->
+
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+													</fl>
+													<!---->
+
+												</fl>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+											<!---->
+
+											<!---->
+
+											<fl id="paym_FL-BIT_107">
+												<fl id="paym_FL-LIST-ITEM-HEADER_108">
+													<app id="paym_APP-SOURCE-TEMPLATE-HEADER_109">
+														<app id="paym_APP-SOURCE-TEMPLATE-HEADER-TITLE_110">
+															PayPal
+															<fl id="paym_FL-TEXT_111">
+																<div id="paym_DIV_112">
+
+																	<!---->
+
+																</div>
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+														</app>
+														<!---->
+
+														<app id="paym_APP-SOURCE-TEMPLATE-LOGO_113">
+															<fl id="paym_FL-PICTURE_114">
+																<picture id="paym_PICTURE_115">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_116" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/paypal_reference.svg"
+																		alt="paypal_reference logo" id="paym_IMG_117" />
+																</picture>
+																<!---->
+
+															</fl>
+														</app>
+														<!---->
+
+													</app>
+												</fl>
+											</fl>
+											<!---->
+
+											<fl id="paym_FL-BIT_118">
+												<!---->
+
+												<!---->
+
+											</fl>
+										</fl>
+										<fl id="paym_FL-BIT_119">
+											<!---->
+
+										</fl>
+									</fl>
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</fl>
+							</fl>
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+						</app>
+					</app>
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<!---->
+
+					<app id="paym_APP-GENERIC-METHOD_120">
+						<app id="paym_APP-SOURCE-TEMPLATE_121">
+							<fl id="paym_FL-LIST-ITEM_122">
+								<fl id="paym_FL-BIT_123">
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<fl id="paym_FL-BIT_124">
+										<fl id="paym_FL-BIT_125">
+											<input type="radio" id="skrillRadio" name="methods" />
+											<fl id="paym_FL-BIT_126">
+												<fl id="paym_FL-BIT_127">
+												</fl>
+												<fl id="paym_FL-RADIO_128">
+
+													<fl id="paym_FL-BIT_129">
+
+
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+														<!---->
+
+													</fl>
+													<!---->
+
+												</fl>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+											<!---->
+
+											<!---->
+
+											<fl id="paym_FL-BIT_133">
+												<fl id="paym_FL-LIST-ITEM-HEADER_134">
+													<app id="paym_APP-SOURCE-TEMPLATE-HEADER_135">
+														<app id="paym_APP-SOURCE-TEMPLATE-HEADER-TITLE_136">
+															Skrill
+															<fl id="paym_FL-TEXT_137">
+																<div id="paym_DIV_138">
+
+																	<!---->
+
+																</div>
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+																<!---->
+
+															</fl>
+														</app>
+														<!---->
+
+														<app id="paym_APP-SOURCE-TEMPLATE-LOGO_139">
+															<fl id="paym_FL-PICTURE_140">
+																<picture id="paym_PICTURE_141">
+																	<!---->
+
+																	<!---->
+
+																	<!---->
+
+																	<source id="paym_SOURCE_142" />
+																	<!---->
+																	<img src="https://www.f-cdn.com/assets/main/en/assets/payments/skrill.svg"
+																		alt="skrill logo" id="paym_IMG_143" />
+																</picture>
+																<!---->
+
+															</fl>
+														</app>
+														<!---->
+
+													</app>
+												</fl>
+											</fl>
+											<!---->
+
+											<fl id="paym_FL-BIT_144">
+												<!---->
+
+												<!---->
+
+											</fl>
+										</fl>
+										<fl id="paym_FL-BIT_145">
+											<!---->
+
+										</fl>
+									</fl>
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</fl>
+							</fl>
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+						</app>
+					</app>
+				</app>
+			</fl>
+		</fl>
+	</fl>
+
+	<fl id="FL-COL_1">
+		<app id="APP-CONFIRMATION_2">
+			<fl id="FL-CARD_3">
+				<fl id="FL-BIT_4">
+					<!---->
+
+					<fl id="FL-BIT_5">
+						<fl id="FL-BIT_6">
+							<fl id="FL-HEADING_7">
+								<!---->
+
+								<h2 id="H2_8">
+									<fl id="FL-CARD-HEADER-TITLE_9">
+										<fl id="FL-HEADING_10">
+											<!---->
+
+											<h2 id="H2_11">
+												Select amount
+												<!---->
+
+											</h2>
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+										</fl>
+									</fl>
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</h2>
+								<!---->
+
+								<!---->
+
+								<!---->
+
+								<!---->
+
+								<!---->
+
+								<!---->
+
+								<!---->
+
+							</fl>
+							<fl id="FL-BIT_12">
+								<!---->
+
+								<fl id="FL-CARD-HEADER-RIGHT_13">
+									<fl id="FL-TEXT_14">
+										<div id="DIV_15">
+											(USD)
+											<!---->
+
+										</div>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+								</fl>
+								<!---->
+
+								<!---->
+
+							</fl>
+							<!---->
+
+							<!---->
+
+						</fl>
+						<!---->
+
+					</fl>
+					<!---->
+
+					<fl id="FL-BIT_16">
+						<fl id="FL-BIT_17">
+							<app id="APP-CONFIRMATION-FORM_18">
+								<fl id="FL-BIT_19">
+									<fl id="FL-BIT_20">
+										<fl id="FL-LABEL_21">
+											<fl id="FL-TEXT_22">
+												<!---->
+												<span id="SPAN_23"><label for="depositCurrencySelect" id="LABEL_24">
+														Currency
+													</label></span>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+										</fl>
+										<!---->
+
+										<!---->
+
+										<fl id="FL-SELECT_25">
+											<fl id="FL-BIT_26">
+												<fl id="FL-BIT_27">
+													<fl id="FL-FLAG_28">
+														<img alt="Flag of "
+															src="https://www.f-cdn.com/assets/main/en/assets/flags/us.png"
+															id="IMG_29" />
+													</fl>
+													<!---->
+
+													<!---->
+
+												</fl>
+												<!---->
+
+												<select id="SELECT_30">
+
+													<!---->
+
+													<!---->
+
+													<option value="US Dollar" id="OPTION_31">
+														US Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="New Zealand Dollar" id="OPTION_32">
+														New Zealand Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="Australian Dollar" id="OPTION_33">
+														Australian Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="British Pounds" id="OPTION_34">
+														British Pounds
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="HongKong Dollar" id="OPTION_35">
+														HongKong Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="Singapore Dollar" id="OPTION_36">
+														Singapore Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="Euro" id="OPTION_37">
+														Euro
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<option value="Canadian Dollar" id="OPTION_38">
+														Canadian Dollar
+													</option>
+													<!---->
+
+													<!---->
+
+													<!---->
+												</select>
+
+												<fl id="FL-ICON_39">
+													<div id="DIV_40">
+														<div id="DIV_41">
+															<svg id="svg_42">
+																<g id="g_43">
+																	<polygon id="polygon_44">
+																	</polygon>
+																	<polygon id="polygon_45">
+																	</polygon>
+																</g>
+															</svg>
+														</div>
+													</div>
+												</fl>
+											</fl>
+											<fl id="FL-VALIDATION-ERROR_46">
+												<!---->
+
+											</fl>
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+									<fl id="FL-BIT_47">
+										<fl id="FL-LABEL_48">
+											<fl id="FL-TEXT_49">
+												<!---->
+												<span id="SPAN_50"><label for="depositAmountInput" id="LABEL_51">
+														Amount
+													</label></span>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+										</fl>
+										<!---->
+
+										<!---->
+
+										<fl id="FL-INPUT_52">
+											<fl id="FL-BIT_53">
+												<!---->
+
+												<fl id="FL-BIT_54">
+													<fl id="FL-BIT_55">
+														<span id="SPAN_56">$</span>
+													</fl>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+													<fl id="FL-BIT_57">
+														<input id="INPUT_58" type="number" />
+														<!---->
+
+														<!---->
+
+													</fl>
+													<!---->
+
+													<!---->
+
+													<!---->
+
+												</fl>
+												<!---->
+
+												<!---->
+
+											</fl>
+											<!---->
+
+											<!---->
+
+											<fl id="FL-VALIDATION-ERROR_59">
+												<!---->
+
+											</fl>
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+								</fl>
+								<!---->
+
+								<!---->
+
+							</app>
+							<!---->
+
+							<app id="APP-TABLE_60">
+								<fl id="FL-BIT_61">
+									<fl id="FL-BIT_62">
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+										<div id="DIV_64">
+											Processing fee
+											<!---->
+
+										</div>
+										<!-- <svg id="svg_72">
+											<path id="path_73">
+											</path>
+										</svg> -->
+										<fl id="FL-TEXT_63">
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<fl id="FL-TOOLTIP_65">
+											<fl id="FL-BIT_66">
+												<span id="SPAN_67"></span>
+												<fl id="FL-BIT_68">
+													<fl id="FL-ICON_69">
+														<div id="DIV_70">
+															<div id="DIV_71">
+
+															</div>
+														</div>
+													</fl>
+												</fl>
+												<!---->
+												<span id="SPAN_74"></span>
+												<!---->
+
+											</fl>
+										</fl>
+										<!---->
+
+									</fl>
+									<fl id="FL-BIT_75">
+										<!---->
+
+										<fl id="FL-TEXT_76">
+											<div id="DIV_77">
+												$0.99
+												<!---->
+
+											</div>
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+								</fl>
+								<fl id="FL-BIT_78">
+									<fl id="FL-BIT_79">
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<fl id="FL-BIT_80">
+											<fl id="FL-TEXT_81">
+												<div id="DIV_82">
+													Total due
+													<!---->
+
+												</div>
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+												<!---->
+
+											</fl>
+											<!---->
+
+											<!---->
+
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+									<fl id="FL-BIT_83">
+										<!---->
+
+										<fl id="FL-TEXT_84">
+											<div id="DIV_85">
+												$30.99
+												<!---->
+
+											</div>
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<!---->
+
+										</fl>
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+										<!---->
+
+									</fl>
+								</fl>
+								<!---->
+
+							</app>
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<!---->
+
+							<app id="APP-CONFIRMATION-BUTTON_86">
+								<fl id="FL-BUTTON_87">
+
+
+									<button type="button" id="BUTTON_88">
+										Confirm and pay
+										<img src="https://www.f-cdn.com/assets/main/en/assets/payments/lock.svg"
+											alt="Lock icon" id="IMG_92" />
+									</button>
+
+
+
+								</fl>
+							</app>
+							<app id="APP-CONFIRMATION-COPY_93">
+								<!---->
+
+								<!---->
+
+								<!---->
+
+								<!---->
+
+							</app>
+							<app id="APP-PAYMENTS-SECURE-LOGO_94">
+								<span id='cardSpan'> </span>
+								<fl id="FL-BIT_95">
+
+									<fl id="FL-PICTURE_96">
+										<picture id="PICTURE_97">
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<source id="SOURCE_98" />
+											<!---->
+											<img src="https://www.f-cdn.com/assets/main/en/assets/payments/secure/ssl-secure.png"
+												alt="SSL Secure Logo" id="IMG_99" />
+										</picture>
+										<!---->
+
+									</fl>
+									<!---->
+
+									<fl id="FL-PICTURE_100">
+										<picture id="PICTURE_101">
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<source id="SOURCE_102" />
+											<!---->
+											<img src="https://www.f-cdn.com/assets/main/en/assets/payments/secure/pci-dss.png"
+												alt="PCI Secure Logo" id="IMG_103" />
+										</picture>
+										<!---->
+
+									</fl>
+									<!---->
+
+									<fl id="FL-PICTURE_104">
+										<picture id="PICTURE_105">
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<source id="SOURCE_106" />
+											<!---->
+											<img src="https://www.f-cdn.com/assets/main/en/assets/payments/secure/mastercard-securecode.svg"
+												alt="MasterCard Secure Logo" id="IMG_107" />
+										</picture>
+										<!---->
+
+									</fl>
+									<fl id="FL-PICTURE_108">
+										<picture id="PICTURE_109">
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<source id="SOURCE_110" />
+											<!---->
+											<img src="https://www.f-cdn.com/assets/main/en/assets/payments/secure/visa-secure-blu.svg"
+												alt="Visa Secure Logo" id="IMG_111" />
+										</picture>
+										<!---->
+
+									</fl>
+								</fl>
+							</app>
+							<!---->
+
+						</fl>
+					</fl>
+				</fl>
+				<!---->
+
+			</fl>
+			<fl id="FL-STICKY-FOOTER_112">
+				<fl id="FL-BIT_113">
+					<fl id="FL-BIT_114">
+						<fl id="FL-BIT_115">
+							<app id="APP-TABLE_116">
+								<!---->
+
+							</app>
+							<!---->
+
+							<app id="APP-CONFIRMATION-BUTTON_117">
+								<fl id="FL-BUTTON_118">
+									<!---->
+
+									<!---->
+
+									<button type="button" id="BUTTON_119">
+									</button>
+									<fl id="FL-PICTURE_120">
+										<picture id="PICTURE_121">
+											<!---->
+
+											<!---->
+
+											<!---->
+
+											<source id="SOURCE_122" />
+											<!---->
+											<img src="https://www.f-cdn.com/assets/main/en/assets/payments/lock.svg"
+												alt="Lock icon" id="IMG_123" />
+										</picture>
+										<!---->
+
+									</fl>
+									<!---->
+
+									<!---->
+									Confirm and pay
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+									<!---->
+
+								</fl>
+							</app>
+						</fl>
+					</fl>
+					<!---->
+
+				</fl>
+				<!---->
+
+				<!---->
+
+				<!---->
+
+				<div id="DIV_124">
+				</div>
+			</fl>
+			<!---->
+
+		</app>
+		<!---->
+
+	</fl>
+</div>
+	<style>
+		.container {
+			max-width: 960px;
+			padding-left: calc(env(safe-area-inset-left) + 12px);
+			padding-right: calc(env(safe-area-inset-left) + 12px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 70%;
+			margin: auto;
+		}
+		#FL-HEADING_10, #H2_11 {
+			width: 100%;
+		}
+		#paym_FL-CARD_1, #paym_FL-BIT_2, #paym_FL-BIT_16, #paym_FL-BIT_15, #paym_FL-LIST-ITEM_14, #paym_APP-SOURCE-TEMPLATE_13, #paym_APP-CREDIT-CARD-METHOD_12, #paym_APP-METHODS_11, #paym_FL-BIT_10, #paym_FL-BIT_3, #paym_FL-BIT_2, #paym_APP-GENERIC-METHOD_94, #paym_APP-SOURCE-TEMPLATE_95, #paym_FL-LIST-ITEM_96, #paym_FL-BIT_97, #paym_FL-BIT_98, #paym_APP-GENERIC-METHOD_120, #paym_APP-SOURCE-TEMPLATE_121, #paym_FL-LIST-ITEM_122, #paym_FL-BIT_123, #paym_FL-BIT_124, #FL-TEXT_81, #FL-BIT_80 {
+			width: 100%;
+		}
+
+		#paym_FL-LIST-ITEM-HEADER_26 {
+			display: flex;
+		}
+
+		#paym_FL-BIT_17 {
+			top: -10px;
+		}
+
+		#SELECT_30 {
+			background-color: white;
+			margin-left: -8px;
+			padding-left: 8px;
+		}
+		
+	</style>
+
+</body>
